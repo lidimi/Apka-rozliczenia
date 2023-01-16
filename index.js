@@ -1,5 +1,4 @@
 // TODO:
-// WYŚWIETLIĆ BŁĘDNĄ KWOTE NA ERROR PAGE,
 // DODAĆ HELPERY,
 
 const gross = document.querySelector("#gross");

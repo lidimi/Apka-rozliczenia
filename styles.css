@@ -54,6 +54,17 @@ ul li {
   -webkit-backdrop-filter: blur(5.7px);
 }
 
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label img {
+  width: 20px;
+  height: 20px;
+}
+
 .input-label input {
   width: 100%;
   margin: 1rem 0;
