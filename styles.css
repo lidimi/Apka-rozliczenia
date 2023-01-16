@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    66deg,
+    rgba(23, 205, 205, 1) -15.1%,
+    rgba(23, 25, 95, 1) 71.5%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+fieldset {
+  padding: 1.5rem 0;
+  border: none;
+}
+
+ul {
+  font-weight: 500;
+}
+
+ul li {
+  margin: 1rem 0;
+}
+
+.container {
+  width: 60%;
+  min-width: 700px;
+  max-width: 900px;
+  color: white;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.7px);
+  -webkit-backdrop-filter: blur(5.7px);
+}
+
+.input-label input {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  border-radius: 5px;
+  border: 2px solid rgb(179, 175, 175);
+  background-color: hsla(360, 100%, 100%, 0.81);
+  letter-spacing: 1px;
+}
+
+.input-label {
+  display: block;
+}
+
+.display-cash-display {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 3.5rem;
+  border-bottom: 1px solid rgb(151, 149, 149);
+  margin-bottom: 1rem;
+}
+
+.fieldsets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 3.5rem;
+}
+
+.buttons {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: none;
+  padding: 0.7rem 2rem;
+  margin: 0 1rem;
+  transition: 400ms ease-in-out 0s;
+}
+
+button[type="reset"],
+.back {
+  background-color: #4ea8de;
+}
+button[type="submit"] {
+  background-color: #5390d9;
+}
+
+/*=========== 
+RADIO BUTTONS
+============= */
+
+.radio {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+
+.radio + .radio {
+  margin-left: 1.2rem;
+}
+
+.radio input[type="radio"] {
+  display: none;
+}
+
+.radio span {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.radio span::after {
+  content: "";
+  height: 0.6rem;
+  width: 0.6rem;
+  background: #fff;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 100ms ease-in-out 0s;
+}
+
+.radio input[type="radio"]:checked ~ span:after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/*============ 
+OK RESULT PAGE
+============== */
+
+.mark {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.result-ok {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.result-ok h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.result-ok p {
+  font-weight: 500;
+}
+
+.button-back {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/*=============== 
+ERROR RESULT PAGE
+================  */
+
+.error h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.error p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/*=========== 
+ACTIVE STATES
+=============  */
+
+.return-hidden,
+.fv-hidden {
+  margin-top: 1rem;
+  visibility: hidden;
+}
+
+.return-hidden input,
+.fv-hidden input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid rgb(179, 175, 175);
+}
+
+.hide {
+  display: none;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.radio-btn:hover {
+  cursor: pointer;
+}
+
+input[type="number"]:focus {
+  border: 2px solid #0fb3be;
+  outline: none;
+}
