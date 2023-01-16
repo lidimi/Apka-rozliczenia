@@ -13,6 +13,23 @@ document.querySelector(".inputs").addEventListener("input", (e) => {
   }
 });
 
+//DISPLAY HELPERS
+
+document.querySelector(".inputs").addEventListener("mouseover", (e) => {
+  if (e.target.tagName.toLowerCase() === "img") {
+    console.log("yay");
+    e.target.parentElement.nextElementSibling.classList.remove("hide");
+  }
+});
+
+// REMOVE HELPERS
+
+document.querySelector(".inputs").addEventListener("mouseout", (e) => {
+  if (e.target.tagName.toLowerCase() === "img") {
+    e.target.parentElement.nextElementSibling.classList.add("hide");
+  }
+});
+
 // DISPLAY HIDDEN INPUTS
 
 const returnsInput = document.querySelector("#returns-amount");
@@ -38,7 +55,7 @@ document.querySelector(".fieldsets").addEventListener("input", (e) => {
   }
 });
 
-// CALCULATE difference
+// CALCULATE DEFFERENCE
 
 function isCorrect() {
   const prevMonth = document.querySelector("#prev-month");

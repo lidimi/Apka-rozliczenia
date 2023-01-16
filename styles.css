@@ -63,6 +63,18 @@ ul li {
 .label img {
   width: 20px;
   height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.helper {
+  max-width: 25rem;
+  padding: 1rem;
+  position: absolute;
+  z-index: 5;
+  background-color: #224775;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }
 
 .input-label input {
