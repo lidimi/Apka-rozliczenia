@@ -39,7 +39,7 @@ document.querySelector(".fieldsets").addEventListener("input", (e) => {
   }
 });
 
-// CALCULATE OUTPUT
+// CALCULATE difference
 
 function isCorrect() {
   const prevMonth = document.querySelector("#prev-month");
@@ -51,12 +51,9 @@ function isCorrect() {
       cashEarnings -
       (+curier.value + +returnsInput.value + +fvInput.value)
   );
+  const difference = parseFloat(total - +currentMonth.value).toFixed(2);
 
-  const output = parseFloat(total - +currentMonth.value).toFixed(2);
-
-  console.log(output);
-
-  return total === +currentMonth.value;
+  return [total === +currentMonth.value, difference];
 }
 
 const form = document.querySelector("form");
@@ -68,9 +65,14 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   form.classList.toggle("hide");
   result.classList.toggle("hide");
-  isCorrect()
+  let [correct, difference] = isCorrect();
+  correct
     ? okResult.classList.remove("hide")
     : errorResult.classList.remove("hide");
+
+  document.querySelector(".cash-incorrect").textContent = `${Math.abs(
+    difference
+  )} zł`;
 });
 
 // RETURN TO FORM
