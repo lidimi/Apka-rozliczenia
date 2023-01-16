@@ -66,10 +66,10 @@ function isCorrect() {
     +prevMonth.value +
       cashEarnings -
       (+curier.value + +returnsInput.value + +fvInput.value)
-  );
+  ).toFixed(2);
   const difference = parseFloat(total - +currentMonth.value).toFixed(2);
 
-  return [total === +currentMonth.value, difference];
+  return [+total === +currentMonth.value, difference];
 }
 
 const form = document.querySelector("form");

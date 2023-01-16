@@ -54,6 +54,10 @@ ul li {
   -webkit-backdrop-filter: blur(5.7px);
 }
 
+/*============ 
+HIDDEN HELPERS
+ =============*/
+
 .label {
   display: flex;
   justify-content: space-between;
@@ -73,9 +77,13 @@ ul li {
   position: absolute;
   z-index: 5;
   background-color: #224775;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
+
+/*=========== 
+INPUT SECTION
+============= */
 
 .input-label input {
   width: 100%;
@@ -111,6 +119,10 @@ ul li {
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem 3.5rem;
 }
+
+/*===== 
+BUTTONS
+=======*/
 
 .buttons {
   padding: 1rem 0;
