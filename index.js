@@ -12,7 +12,7 @@ document.querySelector(".inputs").addEventListener("input", (e) => {
 
 //DISPLAY HELPERS
 
-document.querySelector(".inputs").addEventListener("mouseover", (e) => {
+document.querySelector(".form").addEventListener("mouseover", (e) => {
   if (e.target.tagName.toLowerCase() === "img") {
     e.target.parentElement.nextElementSibling.classList.remove("hide");
   }
@@ -20,7 +20,7 @@ document.querySelector(".inputs").addEventListener("mouseover", (e) => {
 
 // REMOVE HELPERS
 
-document.querySelector(".inputs").addEventListener("mouseout", (e) => {
+document.querySelector(".form").addEventListener("mouseout", (e) => {
   if (e.target.tagName.toLowerCase() === "img") {
     e.target.parentElement.nextElementSibling.classList.add("hide");
   }

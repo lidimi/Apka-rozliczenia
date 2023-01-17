@@ -105,7 +105,7 @@ INPUT SECTION
 
 .display-cash-display {
   font-size: 2rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 .inputs {
@@ -259,6 +259,9 @@ ACTIVE STATES
 .fv-hidden {
   margin-top: 1rem;
   visibility: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .return-hidden input,
@@ -285,6 +288,13 @@ button:hover {
 input[type="number"]:focus {
   border: 2px solid #0fb3be;
   outline: none;
+}
+
+.helper-img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {

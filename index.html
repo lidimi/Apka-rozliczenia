@@ -15,35 +15,35 @@
         <form class="form">
             <div class="inputs">
             <label class="input-label" for="prev-month">
-                <div class="label">Kwota zamknięcia zeszłego miesiąca: <img src="./assets/helper-icon.png" alt="helper"></div>
+                <div class="label">Kwota zamknięcia zeszłego miesiąca: <img class="helper-img" src="./assets/helper-icon.png" alt="helper"></div>
                 <div class="helper hide">
                     <p>Przykład: Jeśli rozliczasz miesiąc grudzień, wpisz stan kasy podczas zamknięcia ostatniego dnia listopada - 30.11</p> 
                 </div>
                 <input id="prev-month" type="number" step="0.01" min="0"  required>
             </label>
             <label class="input-label" for="current-month">
-                <div class="label">Kwota zamknięcia bieżącego miesiąca: <img src="./assets/helper-icon.png" alt="helper"></div>
+                <div class="label">Kwota zamknięcia bieżącego miesiąca: <img class="helper-img" src="./assets/helper-icon.png" alt="helper"></div>
                 <div class="helper hide">
                     <p>Przykład: Jeśli rozliczasz miesiąc grudzień, wpisz stan kasy podczas zamknięcia 31.12</p> 
                 </div>
                 <input id="current-month" type="number" step="0.01" min="0" required>
             </label>
             <label class="input-label" for="gross">
-                <div class="label">Całkowity utarg brutto: <img src="./assets/helper-icon.png" alt="helper"></div>
+                <div class="label">Całkowity utarg brutto: <img class="helper-img" src="./assets/helper-icon.png" alt="helper"></div>
                 <div class="helper hide">
                     <p>Suma brutto od pierwszego do ostaniego dnia miesiąca, który rozliczasz</p> 
                 </div>
                 <input id="gross" type="number" step="0.01" min="0" requierd>
             </label>
             <label class="input-label" for="card">
-                <div class="label">Suma terminal:  <img src="./assets/helper-icon.png" alt="helper"></div>
+                <div class="label">Suma terminal:  <img class="helper-img" src="./assets/helper-icon.png" alt="helper"></div>
                 <div class="helper hide">
                     <p>Suma płatności kartą od pierwszego do ostaniego dnia miesiąca</p> 
                 </div>
                 <input id="card" type="number" step="0.01" min="0" required>
             </label>
             <label class="input-label" for="KW">
-                <div class="label">Suma KW-utarg: <img src="./assets/helper-icon.png" alt="helper"></div>
+                <div class="label">Suma KW-utarg: <img class="helper-img" src="./assets/helper-icon.png" alt="helper"></div>
                 <div class="helper hide">
                     <p>Suma kurier od pierwszego do ostaniego dnia miesiąca</p> 
                 </div>
@@ -51,7 +51,6 @@
             </label>
             <div class="display-cash">
                 <p>Utarg gotówkowy</p>
-                <br>
                 <p class="display-cash-display">0.00 zł</p>
             </div>
             </div>
@@ -70,6 +69,10 @@
                     </label>
                     <div class="return-hidden">
                         <input id="returns-amount" type="number" step="0.01" placeholder="Kwota">
+                        <img class="helper-img" src="./assets/helper-icon.png" alt="helper">
+                    </div>
+                    <div class="helper hide">
+                        <p>Łączna kwota zwrotów w miesiącu, który rozliczasz</p> 
                     </div>
                 </fieldset>
                 <fieldset>
@@ -86,6 +89,10 @@
                     </label>
                     <div class="fv-hidden">
                         <input id="fv-amount" type="number" step="0.01" placeholder="Kwota">
+                        <img class="helper-img" src="./assets/helper-icon.png" alt="helper">
+                    </div>
+                    <div class="helper hide">
+                        <p>Łączna kwota z faktur w miesiącu, który rozliczasz</p> 
                     </div>
                 </fieldset>
             </div>
