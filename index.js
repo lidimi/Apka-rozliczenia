@@ -1,6 +1,3 @@
-// TODO:
-// DODAĆ HELPERY,
-
 const gross = document.querySelector("#gross");
 const card = document.querySelector("#card");
 const displayCash = document.querySelector(".display-cash-display");
@@ -17,7 +14,6 @@ document.querySelector(".inputs").addEventListener("input", (e) => {
 
 document.querySelector(".inputs").addEventListener("mouseover", (e) => {
   if (e.target.tagName.toLowerCase() === "img") {
-    console.log("yay");
     e.target.parentElement.nextElementSibling.classList.remove("hide");
   }
 });
@@ -55,7 +51,7 @@ document.querySelector(".fieldsets").addEventListener("input", (e) => {
   }
 });
 
-// CALCULATE DEFFERENCE
+// CALCULATE OUTPUT & DEFFERENCE
 
 function isCorrect() {
   const prevMonth = document.querySelector("#prev-month");
