@@ -1,9 +1,10 @@
+const form = document.querySelector("form");
 const gross = document.querySelector("#gross");
 const card = document.querySelector("#card");
 const displayCash = document.querySelector(".display-cash-display");
 
 // DISPLAY CASH EARNINGS
-document.querySelector(".inputs").addEventListener("input", (e) => {
+form.addEventListener("input", (e) => {
   if (e.target.id === "gross" || e.target.id === "card") {
     displayCash.textContent =
       Number(gross.value - card.value).toFixed(2) + " zł";
@@ -11,8 +12,7 @@ document.querySelector(".inputs").addEventListener("input", (e) => {
 });
 
 //DISPLAY HELPERS
-
-document.querySelector(".form").addEventListener("mouseover", (e) => {
+form.addEventListener("mouseover", (e) => {
   if (e.target.tagName.toLowerCase() === "img") {
     e.target.parentElement.nextElementSibling.classList.remove("hide");
   }
@@ -68,7 +68,6 @@ function isCorrect() {
   return [+total === +currentMonth.value, difference];
 }
 
-const form = document.querySelector("form");
 const result = document.querySelector(".show-result");
 const okResult = document.querySelector(".result-ok");
 const errorResult = document.querySelector(".error");
